@@ -2,6 +2,12 @@
 
 A small Python research and paper-trading advisor for META built around a dual moving-average crossover. The project intentionally keeps the strategy simple so the walk-forward test is easy to reproduce and audit.
 
+## Out-of-sample result
+
+The chart below is the test window from `META.csv`, using the same SMA20/SMA150 rule as `advisor.py`: long only after the fast average is above the slow average. On that window the strategy Sharpe is 1.08 versus 0.51 for buy-and-hold, with maximum drawdown of -22.7% versus -73.7%.
+
+![META out-of-sample equity curve for the SMA 20/150 strategy versus buy and hold](docs/screenshots/equity-curve.png)
+
 ## What it does
 
 - Downloads historical META prices with yfinance (or uses the checked-in META.csv fallback).
